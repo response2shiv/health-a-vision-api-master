@@ -1,0 +1,14 @@
+
+Api for get Patient uploaded Files Storage:- /api/getPatientUseFileStorage?entityType=TEST_REPORT&id=1 (send id as a user_id from patient_own_reports_files and entityType is a entityType from patient_own_reports_files)
+method: Get
+Response:-
+	{
+		"success": [
+			{
+				 	 "use_storage": 300,
+    				 "user_id": "2"
+			}
+		]
+	}
+
+

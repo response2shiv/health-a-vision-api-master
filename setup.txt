@@ -1,0 +1,57 @@
+///////////////////
+Setup
+
+php version
+
+Install : https://getcomposer.org/
+
+Install Latest xampp : https://www.apachefriends.org/download.html
+		- we need 7.4.12 / PHP 7.4.12
+
+
+Install laravel 
+
+https://laravel.com/docs/8.x/installation#installing-laravel
+
+composer global require laravel/installer
+
+composer require laravel/passport
+
+
+API repo : 
+repo : https://github.com/pinnacle-it/health-a-vision-api.git 
+email : dev@pinnacleit.co.in
+password : Pinnacle@2018
+
+
+php artisan migrate
+
+
+php artisan passport:install
+
+php artisan serve
+
+Hit : http://localhost:8000/
+
+/////////////////
+Model Controller creation
+
+php artisan make:model MyHavIds --controller --migration --resource
+
+
+DB Table or Migration create
+	php artisan make:migration create_sampletbl
+
+Add/Modify  Table columns
+	php artisan make:migration add_fields_patient
+
+
+php artisan migrate
+
+php artisan cache:clear
+
+php artisan config:cache
+
+
+php artisan serve
+

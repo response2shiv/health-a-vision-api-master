@@ -1,0 +1,11 @@
+//EC -Error Code
+EC001 - invalid username password
+EC002 - User not verfied
+EC003 - OTP verification failed
+EC004 - Email Aready exists
+EC005 - Invalid data
+EC006 - Invalid extension
+EC007 - unauthorized user along with 401
+
+//SC - Success codes
+SC001 - password changed Success

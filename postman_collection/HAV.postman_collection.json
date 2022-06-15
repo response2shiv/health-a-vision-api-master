@@ -1,0 +1,1447 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HAV",
+		"_postman_id": "4858bccd-afb0-cc7c-dc4b-60aa4c1d3811",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"url": "{{baseAPI}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"vsb\",\"firstName\":\"f\",\"lastName\":\"vinayak\",\"phone\":\"123\",\"status\":\"1\",\"userRole\":\"PATIENT\",\"email\":\"r2aw1dhe@gmail.com\",\"password\":\"12345\",\"c_password\":\"12345\",\"dob\": \"2018-12-01\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "{{baseAPI}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"2mukesh-2patile@gmail.com\",\n\t\"password\":\"12345\",\n\t\"userRole\":\"PATIENT\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Login Details",
+					"request": {
+						"url": "{{baseAPI}}/api/details",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjM3MzE3YTkyZWM3YzRjMTViMDc4YWJlNTMxOTU4YzIxYjE2YThjODBhMGVjZTNlYjdmNGFkNjU3M2RjYTVhNjI5ZjdhZjg3OTBlNDhiZDciLCJpYXQiOjE2MDY0MTA3MzUsIm5iZiI6MTYwNjQxMDczNSwiZXhwIjoxNjM3OTQ2NzM1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Kkq9AtTHr9zzTqcP_DIyrA9cicdKsr8XY9hyuH7ioJKrSJEX9SV8QjZgL0FyyKaLzEPgQJGXl0rFDNjbVtTduslOjC1fTDCfyDpF5STsYcA4mcJpvv24vCk3kutTut93LTlJhz19GRlpRug1POst0D8LiNLIu5NeutVUOLtOgPg9lueqqKYvaYoQr5X6ZmhUZfLTZURNhRcoaVEIggREd8jlilNd7_fWGpctQU0pS5LZjsziyCucsUOMJvJGVSOvn5vgwk3FRVGtAc4xVdAmaYCsQQZvon3svCBx4QjrwMwEItgWXdyZGFgxWddgfbt95Ptnjw7NxXz9PTUtbqQyfQr2wofrchauub87oYCds0UoA3oVGMbHdhxZoKxRZiTh0eoivCek8zz1btA5cqjuFYlnQ98Eg19g0_gvkAYtBZ5JOE8WPvFLoJUzsq0PrKOCkTifkecG4Y-NhizdkBcg7PNE8ZqTjVYoTKvwO8z0t0c1Ff1GD76ui2HKOO11d6teuzuZHUGnwmutzyOi-DNAmUlzZnrAi4W9dCG-Rj8HRjUy97yyu6tmfDu1VrSvGfth2nyvgbtTH2mPkQSaFXJH7d5DA9X7aULQeColrTN8BSIbHBzC8OKqYMmd72R4Xkyd7IEUQFBY_R5lLEGftPBT3VTpKucq6dohxHzSqUcrJ4k"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Auth : OTP Verify",
+					"request": {
+						"url": "{{baseAPI}}/api/user/verifyOtp",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\t\"email\":\"vsb@gmail.com\",\r\n\t\t\t\"otp\":\"94057\"\r\n\t\t}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Auth : ResendOtp",
+					"request": {
+						"url": "{{baseAPI}}/api/user/resendOtp",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\t\"email\":\"sameerbhosekar123@gmail.com\"\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Center",
+			"description": "",
+			"item": [
+				{
+					"name": "Testing Center:Create",
+					"request": {
+						"url": "{{baseAPI}}/api/testingcenter/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {       \"name\":\"Satya Pathology\",\r\n        \"addressline1\":\"1\",\r\n        \"addressline2\":\"2\",\r\n        \"city\":\"3\",\r\n        \"state\":\"4\",\r\n        \"postalCode\":\"5\"  ,\r\n        \"country\":\"6\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : Patients",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testingcenter/patients?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testingcenter",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : List",
+					"request": {
+						"url": "{{baseAPI}}/api/testingcenter/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : Testpanels",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testingcenter/testpanels?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testingcenter",
+								"testpanels"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : User : Create",
+					"request": {
+						"url": "{{baseAPI}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"vsb\",\n\t\"firstName\":\"f\",\n\t\"lastName\":\"vinayak\",\n\t\"phone\":\"123\",\n\t\"status\":\"1\",\n\t\"userRole\":\"TESTING_CENTER\",\n\t\"email\":\"rowdy@gmail.com\",\n\t\"password\":\"12345\",\n\"c_password\":\"12345\",\n\"testing_center_id\":3\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : Users : List",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testingcenter/users?id=3",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testingcenter",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : Update",
+					"request": {
+						"url": "{{baseAPI}}/api/testingcenter/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {       \r\n \t    \"id\":\"1\",\r\n \t    \"name\":\"Glovilkar Metroplos\",\r\n        \"addressline1\":\"1000\",\r\n        \"addressline2\":\"2000\",\r\n        \"city\":\"3000\",\r\n        \"state\":\"4000\",\r\n        \"postalCode\":\"5000\"  ,\r\n        \"country\":\"6000\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testing Center : getOne",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testingcenter/getOne?id=4",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testingcenter",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"description": "",
+			"item": [
+				{
+					"name": "Patients : ALL",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Create",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\" : \"Mrs\",\r\n\"firstName\" : \"Radhe\",\r\n\"lastName\" : \"Tiwari\",\r\n\"gender\" : \"F\",\r\n\"email\" : \"1\",\r\n\"phone\" : \"2\",\r\n\"dob\" : \"\",\r\n\"addressline1\" : \"\",\r\n\"addressline2\" : \"\",\r\n\"city\" : \"\",\r\n\"state\" : \"\",\r\n\"postalCode\" : \"\",\r\n\"country\":\"\",\r\n\"idProofType\":\"\",\r\n\"idProofFile\":\"\",\r\n\"testing_center_id\":null,\r\n\"specialist_agent_id\":1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Update",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\":1,\r\n\"title\" : \"radhe\",\r\n\"firstName\" : \"M\",\r\n\"lastName\" : \"Gaytri\",\r\n\"gender\" : \"\",\r\n\"email\" : \"\",\r\n\"phone\" : \"\",\r\n\"dob\" : \"\",\r\n\"addressline1\" : \"\",\r\n\"addressline2\" : \"\",\r\n\"city\" : \"\",\r\n\"state\" : \"\",\r\n\"postalCode\" : \"\",\r\n\"country\":\"\",\r\n\"testing_center_id\":1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : getOne",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/getOne?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Vitals Create By Own",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/vitals/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t        \"age\" : 50,\n        \"height\" : 150,\n        \"weight\" : 20.1,\n        \"bloodGroup\" : \"AB\",\n        \"previousSurgeries\" : \"fdsfdsdf\",\n        \"metabolicDiseases\" : \"fdfdsdsfdsfddsfdsfd\",\n        \"allergies\" : \"fdsfdsdsf frdsffd dff\",\n        \"gastroIntestinal\" : \"fdfds fdff\",\n        \"user_id\" : 8\n\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Vitals Create By Pathalogy",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/vitals/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t        \"age\" : 50,\n        \"height\" : 150,\n        \"weight\" : 20.1,\n        \"bloodGroup\" : \"AB\",\n        \"previousSurgeries\" : \"fdsfdsdf\",\n        \"metabolicDiseases\" : \"fdfdsdsfdsfddsfdsfd\",\n        \"allergies\" : \"fdsfdsdsf frdsffd dff\",\n        \"gastroIntestinal\" : \"fdfds fdff\",\n        \"patient_id\" : 8\n\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient Vitals Get : By Own",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/vitals/get?userId=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"vitals",
+								"get"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient Vitals Get : By Pathalogy",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/vitals/get?patientId=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"vitals",
+								"get"
+							],
+							"query": [
+								{
+									"key": "patientId",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Insurance Create",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/insurance/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"fromDate\": \"2020-12-01T18:30:00.000Z\",\r\n\"insurance_provider\": \"dsfs\",\r\n\"ma_id\": \"sf32\",\r\n\"policyNumber\": \"32r32\",\r\n\"toDate\": \"2020-12-23\",\r\n\"user_id\": 58,\r\n\"insuredName\":\"\",\r\n\"insuranceType\":\"\",\r\n\"nomineeName\":\"\",\r\n\"nomineeRelationship\":\"\",\r\n\"premiumDate\":\"\",\r\n\"dob\":\"2020-12-01T18:30:00.000Z\",\r\n\"inssurance_provider_id\":2\r\n\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient: Insurance GET",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/insurance/list?userId=58",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"insurance",
+								"list"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "58",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient: getone Latest record of insurance",
+					"request": {
+						"url": "",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseAPI}}/api/patient/insurance/getOne?userId=1",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/insurance/getOne?userId=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"insurance",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "patient insurance update",
+					"request": {
+						"url": "{{baseAPI}}/api/patient/insurance/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"fromDate\": \"2020-12-01T18:30:00.000Z\",\r\n\"insurance_provider\": \"dsfs\",\r\n\"ma_id\": \"sf32\",\r\n\"policyNumber\": \"32r32\",\r\n\"toDate\": \"2020-12-23\",\r\n\"user_id\": 58,\r\n\"insuredName\":\"\",\r\n\"insuranceType\":\"General\",\r\n\"nomineeName\":\"\",\r\n\"nomineeRelationship\":\"wife\",\r\n\"premiumDate\":\"\",\r\n\"dob\":\"2020-12-01T18:30:00.000Z\",\r\n\"inssurance_provider_id\":2,\r\n\"id\": 5\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "individual list",
+					"request": {
+						"url": "{{baseAPI}}/api/individual/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testpanel",
+			"description": "",
+			"item": [
+				{
+					"name": "Testpanel : Create",
+					"request": {
+						"url": "{{baseAPI}}/api/testpanel/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"vsb\",\n\t\"category\":\"f\",\n\t\"middleName\":\"vinayak\",\n\t\"tests\":\"vinayak\",\n\t\"ratelist\":123.23,\n\t\"testing_center_id\":1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testpanel : ALL List",
+					"request": {
+						"url": "{{baseAPI}}/api/testpanel/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testpanel : Update",
+					"request": {
+						"url": "{{baseAPI}}/api/testpanel/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1\",\n\t\"name\":\"a\",\n\t\"category\":\"b\",\n\t\"tests\":\"rowdy rathoire\",\n\t\"ratelist\":143.23,\n\t\"testing_center_id\":1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testpanel : getOne",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testpanel/getOne?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testpanel",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testpanel : Master List",
+					"request": {
+						"url": "{{baseAPI}}/api/testpanel/masterlist",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testpanel : Master Create",
+					"request": {
+						"url": "{{baseAPI}}/api/testpanel/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"vsb\",\n\t\"category\":\"f\",\n\t\"middleName\":\"vinayak\",\n\t\"tests\":\"vinayak\",\n\t\"ratelist\":123.23\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"description": "",
+			"item": [
+				{
+					"name": "Test Mail",
+					"request": {
+						"url": "{{baseAPI}}/api/user/mail",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"description": "",
+			"item": [
+				{
+					"name": "Booking : Create",
+					"request": {
+						"url": "{{baseAPI}}/api/booking/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patient_id\":1,\n    \"testpanel_id\":1,\n    \"testing_center_id\":1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Booking : list",
+					"request": {
+						"url": "{{baseAPI}}/api/booking/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Testingcenter : Bookings",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/testingcenter/bookings?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"testingcenter",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patient : Bookings",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/patient/bookings?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"patient",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Booking : Update",
+					"request": {
+						"url": "{{baseAPI}}/api/booking/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 3,\n\t\"patient_id\":1,\n    \"testpanel_id\":1,\n    \"testing_center_id\":1,\n    \"paymentStatus\":\"Paid\",\n    \"testStatus\":\"Test Conducted\",\n    \"file\":\"12345678.pdf\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File Upload",
+			"description": "",
+			"item": [
+				{
+					"name": "File : Upload",
+					"request": {
+						"url": "{{baseAPI}}/api/file/upload",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "PIN-UP Presentation.pptx",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient Report",
+			"description": "",
+			"item": [
+				{
+					"name": "Reports : upload- Folder Create",
+					"request": {
+						"url": "{{baseAPI}}/api/reports/upload/folder/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"folderName\" : \"vsb\",\r\n\"stared\" : false,\r\n\"user_id\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reports Upload : File Create",
+					"request": {
+						"url": "{{baseAPI}}/api/reports/upload/file/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"fileType\": \"PPT\",\n        \"uploadedName\": \"1607108579.pptx\",\n        \"orignalFileName\": \"PIN-UP Presentation.pptx\",\n        \"folder_id\":1,\n        \"user_id\": 1\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reports : upload : Folder : List",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/reports/upload/folder/list?id=2",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"upload",
+								"folder",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reports : Upload : File : list",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/reports/upload/file/list?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"upload",
+								"file",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reports : upload : file : list By Folder",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/reports/upload/file/listByFolder?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"upload",
+								"file",
+								"listByFolder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Specialist Agent",
+			"description": "",
+			"item": [
+				{
+					"name": "Specialist Agent : patients",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/specialistagent/patients?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"specialistagent",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "User : Link My hav ids",
+					"request": {
+						"url": "{{baseAPI}}/api/user/linkmyhavids",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"havId\":\"12345\",\r\n\t\"userId\":1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User byrole",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/user/byrole?role=SPECIALIST_AGENT",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"byrole"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "SPECIALIST_AGENT"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User myhavids",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/user/myhavids?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"myhavids"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User : resetPassword",
+					"request": {
+						"url": "{{baseAPI}}/api/user/resetPassword",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"2mukesh-2patile@gmail.com\",\n\t\"password\":\"123456789\",\n    \"c_password\":\"123456789\",\n    \"otp\":\"79370\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "user address update",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/user/address/update?id=31",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"address",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "31",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"addressline1\" : \"1\",\r\n\"addressline2\" : \"2\",\r\n\"city\" : \"3\",\r\n\"state\" : \"4\",\r\n\"postalCode\" : \"5\",\r\n\"country\":\"6\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inssurance-Provider",
+			"description": "",
+			"item": [
+				{
+					"name": "Inssurance-Providers Create",
+					"request": {
+						"url": "{{baseAPI}}/api/inssuranceProviders/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Vinayak Insrrence co\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Inssurance Providers list",
+					"request": {
+						"url": "{{baseAPI}}/api/inssuranceProviders/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "inssurance Providers update",
+					"request": {
+						"url": "{{baseAPI}}/api/inssuranceProviders/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"id\": 1,\n            \"name\": \"Shr Ram Finance\",\n            \"created_at\": \"2020-12-29T18:36:21.000000Z\",\n            \"updated_at\": \"2020-12-29T18:36:21.000000Z\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"description": "",
+			"item": [
+				{
+					"name": "master Subscription Package create",
+					"request": {
+						"url": "{{baseAPI}}/api/masterSubscriptionPackage/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"packageKey\" : \"Basic 1\",\r\n\"displayName\" : \"First Package\",\r\n\"description\" : \"small desc\",\r\n\"storageLimit\" : 1000,\r\n\"charges\" : \"10\",\r\n\"validityInDays\":30\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "master Subscription Package list",
+					"request": {
+						"url": "{{baseAPI}}/api/masterSubscriptionPackage/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subscription Payments create",
+					"request": {
+						"url": "{{baseAPI}}/api/subscriptionPayments/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"transactionId\" : \"12345\",\n\"status\" : \"Success\",\n\"user_id\" : 58,\n\"master_subscription_package_id\":1\n\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subscription Payments list",
+					"request": {
+						"url": "{{baseAPI}}/api/subscriptionPayments/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subscription Payments byUser",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/subscriptionPayments/byUser?id=58",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"subscriptionPayments",
+								"byUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "58",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subscription Payments getOne",
+					"request": {
+						"url": {
+							"raw": "{{baseAPI}}/api/subscriptionPayments/getOne?id=1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"api",
+								"subscriptionPayments",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dd",
+			"request": {
+				"url": "dd",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
